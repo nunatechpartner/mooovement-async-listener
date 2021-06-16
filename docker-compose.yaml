@@ -1,0 +1,8 @@
+version: '3'
+services:
+  listener:
+    build:
+      context: .
+    image: postgres_listener
+    env_file:
+      - .env
