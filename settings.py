@@ -8,5 +8,5 @@ POSTGRE_DATABASE = os.environ['POSTGRE_DATABASE']
 
 ### API ###
 API_KEY = os.environ['API_KEY']
-SECRET_KEY = os.environ['SECRET_KEY']
+JWT_SECRET = os.environ['JWT_SECRET']
 API_PUSH_URL = 'https://mooovement.actuatech.org/api/v0.1/notifications/push/'

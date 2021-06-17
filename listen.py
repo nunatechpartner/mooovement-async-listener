@@ -17,7 +17,7 @@ cursor = conn.cursor()
 cursor.execute("LISTEN notifications;")
 
 # Create api token
-token = generate_token(settings.API_KEY, settings.SECRET_KEY)
+token = generate_token(settings.API_KEY, settings.JWT_SECRET)
 
 
 def listen_callback():
