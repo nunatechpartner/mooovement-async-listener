@@ -22,7 +22,9 @@ token = generate_token(settings.API_KEY, settings.JWT_SECRET)
 
 def listen_callback():
     conn.poll()
-    q.put_nowait(conn.notifies.pop(0))
+    while conn.notifies:
+        notify = conn.notifies.pop(0)
+        q.put_nowait(notify)
 
 
 async def do_whatever():
